@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oss-impact-report"
+version = "0.1.0"
+description = "Generate local-first open source impact reports for maintainers."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "oss-impact-report maintainers"}
+]
+keywords = ["open-source", "maintainers", "git", "metrics", "reporting"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Version Control :: Git",
+  "Topic :: Utilities"
+]
+
+[project.urls]
+Homepage = "https://github.com/YOUR-USER/oss-impact-report"
+Issues = "https://github.com/YOUR-USER/oss-impact-report/issues"
+
+[project.scripts]
+oss-impact-report = "oss_impact_report.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+oss_impact_report = ["py.typed"]
