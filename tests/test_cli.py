@@ -20,9 +20,9 @@ class CliTests(unittest.TestCase):
         payload = json.loads(output.getvalue())
         self.assertEqual(payload["status"], "not_git_repository")
 
-    def test_cli_writes_output_file(self):
+    def test_cli_writes_output_file_and_creates_parent_directories(self):
         with tempfile.TemporaryDirectory() as tmp:
-            output_path = Path(tmp) / "impact.md"
+            output_path = Path(tmp) / "reports" / "impact.md"
             code = main([
                 "--repo",
                 tmp,

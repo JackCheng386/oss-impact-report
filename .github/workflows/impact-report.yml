@@ -1,0 +1,26 @@
+name: Impact Report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * 1"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Generate Markdown report
+        run: oss-impact-report --repo . --format markdown --output reports/impact-report.md
+      - name: Generate JSON report
+        run: oss-impact-report --repo . --format json --output reports/impact-report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: impact-report
+          path: reports/

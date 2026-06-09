@@ -16,6 +16,7 @@ reviews without rebuilding the same report by hand.
 - Latest tag summary for release cadence evidence.
 - Plain maintenance recommendations based on observable project signals.
 - Standard-library Python implementation.
+- GitHub Actions workflow for scheduled report artifacts.
 
 ## Install From Source
 
@@ -45,6 +46,13 @@ Change the activity window:
 oss-impact-report --repo . --since-days 180 --project-name "My Project"
 ```
 
+Generate reports in a GitHub workflow:
+
+```yaml
+- run: python -m pip install git+https://github.com/JackCheng386/oss-impact-report.git
+- run: oss-impact-report --repo . --format markdown --output reports/impact-report.md
+```
+
 ## Example Output
 
 ```markdown
@@ -71,11 +79,12 @@ oss-impact-report --repo . --since-days 180 --project-name "My Project"
 
 - GitHub API integration for stars, forks, issues, PRs, and dependents.
 - Registry adapters for npm, PyPI, crates.io, RubyGems, and Docker Hub.
-- GitHub Action that publishes `impact-report.md` on a schedule.
+- GitHub Action examples for scheduled report generation.
 - OpenSSF Scorecard and dependency health summaries.
 - Templates for sponsorship pages and project governance docs.
 
-See [`docs/roadmap.md`](docs/roadmap.md) for the current project plan.
+See [`docs/roadmap.md`](docs/roadmap.md) for the current project plan and
+[`docs/github-action.md`](docs/github-action.md) for workflow usage.
 
 ## Contributing
 

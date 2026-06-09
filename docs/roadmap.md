@@ -5,7 +5,7 @@ project health summaries.
 
 ## 0.2.0
 
-- Add a GitHub Action for scheduled report generation.
+- Improve the GitHub Action for scheduled report generation.
 - Add example reports from public repositories.
 - Improve empty-repository and detached-HEAD handling.
 - Document recommended report fields for release notes and sponsorship updates.
