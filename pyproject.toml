@@ -27,8 +27,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/YOUR-USER/oss-impact-report"
-Issues = "https://github.com/YOUR-USER/oss-impact-report/issues"
+Homepage = "https://github.com/JackCheng386/oss-impact-report"
+Issues = "https://github.com/JackCheng386/oss-impact-report/issues"
 
 [project.scripts]
 oss-impact-report = "oss_impact_report.cli:main"

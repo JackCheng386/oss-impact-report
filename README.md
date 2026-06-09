@@ -23,7 +23,7 @@ describe real open source work truthfully.
 ## Install From Source
 
 ```powershell
-git clone https://github.com/YOUR-USER/oss-impact-report.git
+git clone https://github.com/JackCheng386/oss-impact-report.git
 cd oss-impact-report
 python -m pip install -e .
 ```
