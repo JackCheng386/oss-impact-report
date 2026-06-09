@@ -1,15 +1,12 @@
 # oss-impact-report
 
-Generate practical evidence packs for open source maintainers.
+Generate practical health reports for open source maintainers.
 
-`oss-impact-report` is a small CLI that reads a local Git repository and produces
-a Markdown or JSON report about project activity, contributor breadth, release
-signals, and maintenance gaps. It is designed for maintainers who need a clear,
-auditable summary for release notes, sponsorship pages, grant applications,
-project handoffs, and internal open source reviews.
-
-This project is not a shortcut to any vendor program. It helps maintainers
-describe real open source work truthfully.
+`oss-impact-report` is a small CLI that reads a local Git repository and turns
+maintenance signals into Markdown or JSON. It summarizes activity, contributor
+breadth, release cadence, and maintenance gaps so maintainers can prepare
+release notes, sponsorship updates, project handoffs, and internal open source
+reviews without rebuilding the same report by hand.
 
 ## Features
 
@@ -77,6 +74,8 @@ oss-impact-report --repo . --since-days 180 --project-name "My Project"
 - GitHub Action that publishes `impact-report.md` on a schedule.
 - OpenSSF Scorecard and dependency health summaries.
 - Templates for sponsorship pages and project governance docs.
+
+See [`docs/roadmap.md`](docs/roadmap.md) for the current project plan.
 
 ## Contributing
 
